@@ -15,18 +15,15 @@
     </button>
     <button
       onclick="
-      
-      cartQuantity++;
-      console.log(`The cart quantity is : ${cartQuantity}`)
-
+      cartQuantity < 10 ? (cartQuantity++, console.log(`The cart quantity is : ${cartQuantity}`) ) : alert('Maximum cart Quantity Reached.'); 
     "
     >
       Add to Cart
     </button>
     <button
       onclick="
-      cartQuantity += 2;
-      console.log(`The cart quantity is : ${cartQuantity}`)
+      cartQuantity + 2 <= 10 ? ( cartQuantity += 2 , console.log(`The cart quantity is : ${cartQuantity}`) ) : alert('Maximum cart Quantity Reached.'); 
+
 
     "
     >
@@ -34,8 +31,8 @@
     </button>
     <button
       onclick="
-      cartQuantity += 3;
-      console.log(`The cart quantity is : ${cartQuantity}`)
+      cartQuantity + 3 <= 10 ? ( cartQuantity += 3 , console.log(`The cart quantity is : ${cartQuantity}`) ) : alert('Maximum cart Quantity Reached.'); 
+
     "
     >
       +3
@@ -43,8 +40,8 @@
 
     <button
       onclick="
-      cartQuantity += 4;
-      console.log(`The cart quantity is : ${cartQuantity}`)
+      cartQuantity + 4 <= 10 ? ( cartQuantity += 4 , console.log(`The cart quantity is : ${cartQuantity}`) ) : alert('Maximum cart Quantity Reached.'); 
+
     "
     >
       +4
@@ -52,8 +49,8 @@
 
     <button
       onclick="
-      cartQuantity += 5;
-      console.log(`The cart quantity is : ${cartQuantity}`)
+      cartQuantity + 5 <= 10 ? ( cartQuantity += 5 , console.log(`The cart quantity is : ${cartQuantity}`) ) : alert('Maximum cart Quantity Reached.'); 
+
     "
     >
       +5
@@ -61,8 +58,8 @@
 
     <button
       onclick="
-      cartQuantity -= 2;
-      console.log(`The cart quantity is : ${cartQuantity}`)
+      cartQuantity - 2  >= 0 ? ( cartQuantity -= 2 , console.log(`The cart quantity is : ${cartQuantity}`) ) : alert('Not enough items.'); 
+
     "
     >
       -2
@@ -70,8 +67,8 @@
 
     <button
       onclick="
-      cartQuantity -= 3;
-      console.log(`The cart quantity is : ${cartQuantity}`)
+      cartQuantity -3 >= 0 ? ( cartQuantity -= 3 , console.log(`The cart quantity is : ${cartQuantity}`) ) : alert('Not enough items.'); 
+
     "
     >
       -3
