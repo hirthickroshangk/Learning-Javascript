@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans part 2</title>
+  </head>
+  <body>
+    
+    <script>
+      console.log(NaN);
+      console.log(undefined);
+      let sampleVariable = 0;
+      if (sampleVariable) {
+        console.log('hi iam still alive');
+      }
+      if (NaN) {
+        console.log('SG WAS HERE!!')
+      }
+      let whoAreYou = true ? 'hey i am saul goodMan' : 'hey iam saul badMan';
+      console.log(whoAreYou);
+      whoAreYou = 5>4 ? 'dumbshit' : 'bullshit';
+      console.log(whoAreYou);
+
+      0 &&  console.log('byeee byeee see you');
+      0 && console.log('let\'s party');
+      1 && console.log('let\'s party');                  // These are some of the operators we can use as a shortcut for if statements.
+      undefined && console.log('let\'s make it happen!!');
+      NaN && console.log(7777);
+      'any value' && console.log(7777);
+
+      0 || console.log('channa mereaya mereya channa mereya mereya yaaaaa');
+      currency = 'EUR' || 'USD';
+      console.log(currency);
+      currency = NaN || 'INR' ;
+      console.log(currency);
+      currency = undefined && 'INR';
+      console.log(currency);
+
+
+
+      
+    </script>
+  </body>
+</html>

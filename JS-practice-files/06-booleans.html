@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <title>Booleans</title>
+  <head> </head>
+  <body>
+    <script>
+      console.log("hello" == "hello");
+      console.log(55 == "55");
+      console.log(55 === "55");
+      console.log(45 >= 45);
+      console.log(45 > 45);
+      console.log(7 !== 7);
+      console.log(7 != "45");
+      console.log(50 > 10 + 2 * 30); // comparision operators have the lowest priority in mathematical operations.
+
+      if (false) console.log("hello hirthick roshan welcome back");
+      else console.log("authentication failed");
+
+      const age = prompt("please enter your age");
+
+      if (age <= 0) {
+        console.log("please enter a valid age.");
+      }
+      if (age >= 18) {
+        console.log("You can apply for the driving license.");
+      } else if (age >= 17) {
+        console.log("You can apply the next year.");
+      } else if (age <= 16 && age > 0) {
+        console.log("Minimum age for driving license application is 18 years.");
+      }
+
+      
+
+
+
+    </script>
+  </body>
+</html>
