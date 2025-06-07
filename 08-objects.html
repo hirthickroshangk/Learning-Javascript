@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--Started learning objects , actually this is a very useful feature in javascript and can be used for solving a large variety of problems-->
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      const product = {
+        color: "green",
+        name: "sticky notes",
+        price: 75,
+      };
+      console.log(product.name);
+      console.log(product.color, product.price, product.name);
+      product.brand = "megafixcent";
+      console.log(product.color, product.price, product.name, product.brand);
+      delete product.color;
+      console.log(product.color);
+
+      const dress = {
+        color: "white",
+        "material-type": "cotton",
+        price: 500,
+        delivery: {
+          "standard-delivery": "5 days", //creating a nested object
+          "premium-delivery": "2 days",
+        },
+        order: function makeOrder() {
+          // learning to create a function inside the object which is called as method.
+          return "order placed";
+        },
+      };
+      console.log(dress);
+      console.log(dress.price);
+      console.log(dress["material-type"]); //I learned to use square brackets in some exceptional cases, such as when using a hyphen (-) in the names of object properties.
+      console.log(dress["price"]);
+      console.log(dress.delivery["standard-delivery"]); // calling a nested object with a hypen.
+      console.log(dress.order()); // calling a method inside an object.
+      console.log(typeof console); // learned that the console.log is also an method
+      console.log(typeof console.log);
+
+      // learning build-in method of json which helps to convert javascript code to json
+      console.log(JSON.stringify(dress)); // json doesnt contain functions inside it.
+      const jsonString = JSON.stringify(dress);
+      console.log(jsonString);
+      console.log(JSON.parse(jsonString)); //using parse, a build in json method for converting json code to javascript code.
+    </script>
+  </body>
+</html>
