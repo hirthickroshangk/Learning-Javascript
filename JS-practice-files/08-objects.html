@@ -45,6 +45,42 @@
       const jsonString = JSON.stringify(dress);
       console.log(jsonString);
       console.log(JSON.parse(jsonString)); //using parse, a build in json method for converting json code to javascript code.
+
+      console.log("hirthick roshan gk".length); // the strings can also have properties
+      console.log("software developer".toUpperCase()); // and methods , this is made by a
+      console.log("pop-pop".endsWith("op")); // special javascript feature called auto boxing.
+      console.log("tring-tring".includes("tring"));
+
+      const object1 = {
+        message: "hey hii",
+        month: "june",
+        year: 2025,
+      };
+      object2 = {};
+      object2 = object1; //
+      console.log(object2);
+      const object3 = {
+        message: "hey hii",
+      };
+      console.log(object1 === object3); //the code result will be false even if the
+      console.log(object1 === object2); // properties and values are same because
+      // objects are just references to a data in
+      // memory , so they work that way.
+      const { message, month, year } = object1; // DESTRUCTURING easier way to take properties
+      console.log(message, month, year); // out of objects.
+
+      const object5 = {
+        //message : message  // practicing some shorthands for calling properties and methods.
+        message,
+        //  method : function greet() {
+        //    console.log('Hi how are you')
+        //  }
+        greet() {
+          console.log("Hi how are you");
+        },
+      };
+      console.log(object5.message);
+      object5.greet();
     </script>
   </body>
 </html>
