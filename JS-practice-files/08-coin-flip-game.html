@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head> <!--Updating the old coin flip game with local stroage features
+    and reusing code with functions-->
+    <title>Flip The Coin</title>
+  </head>
+  <body>
+    <button
+      onclick="
+    flip('heads');
+    "
+    >
+      Heads
+    </button>
+    <button
+      onclick="
+    flip('tails');
+    "
+    >
+      Tails
+    </button>
+    <script>
+      
+      const score = JSON.parse(localStorage.getItem('score')) || {wins : 0, losses : 0};
+
+
+      function getComputerGuess() {
+        return Math.random() > 0.5 ? 'heads' : 'tails';
+        
+      }
+
+      function flip(playerGuess) {
+        const computerGuess = getComputerGuess();
+        
+        let result = "";
+        
+        
+
+        playerGuess === computerGuess ? result = 'win' : 
+        result ='lose';
+
+        
+
+        result === 'win' ? score.wins++ : score.losses++;
+
+        localStorage.setItem('score', JSON.stringify(score));
+
+        alert(`Computers Move ${computerGuess} \nPlayers Move ${playerGuess} \nYou ${result} \nWins : ${score.wins}, Losses : ${score.losses}
+        `);
+      }
+    </script>
+  </body>
+</html>
