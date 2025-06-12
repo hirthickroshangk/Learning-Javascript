@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>                       <!--Document Object Model-->
+    <title>dom</title> <!--DOM gives us full control over the webpage-->
+  </head>
+  <body>
+    <button>HELLO</button>
+    <button class="js-button-2">bye-bye</button>
+
+    <script>
+      document.querySelector('button').innerHTML ='goodBYE';
+     
+      console.log(document.querySelector('button').innerHTML);
+      
+      document.querySelector('.js-button-2').innerHTML = 'goodLUCK';
+
+      console.log(document.querySelector('.js-button-2').innerHTML);
+
+      const button2Element = document.querySelector('.js-button-2');
+      console.log(button2Element);
+
+      
+
+    
+
+      
+      
+      /*
+      document.body.innerHTML = 'iam inner a html';
+      document.title = 'DOM';
+      */
+      /*
+      console.log(document);
+      document.body.innerHTML = 'hola amigos!!';
+      console.log(document.scripts);
+      console.log(typeof document);
+      console.log(typeof document.body);
+      console.log(typeof document.body.innerHTML);
+      console.log(typeof document.body.innerHTML.charAt);
+
+      document.body.innerHTML = `
+      <button style = "color:green; background-color : yellow; border:
+      none" >
+        DO IT!!
+      </button>`
+      ;
+    */
+      
+      
+
+
+    </script>
+  </body>
+</html>

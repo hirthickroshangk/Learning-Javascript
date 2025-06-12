@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>  <!--Working on some mini projects for improving my skills in DOM-->
+  <head>   <!--We make a website amazing with this dom feature-->
+    <title>DOM MINI PROJECTS</title>
+  </head>
+  <body>
+    <p>Welcome To Our Channel, Do Subscribe for constant fun!!</p>
+    
+    <button class="js-subscribe-button" onclick="
+      subscribe();
+    ">Subscribe</button>
+
+    <p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost of order" class="js-cost-input"
+    onkeydown="
+    handleKeydown(event);
+    ">
+    <button class="js-calculate" onclick="
+      calculateCost(); 
+    ">Calculate</button>
+    <p class="js-result">Hit enter or the calculate button!!</p>
+  
+    <script>                     //Using querySelector we can choose any element
+      function subscribe() {                                 // in the HTML structure and control it.
+        const buttonElement = document.querySelector('.js-subscribe-button');
+        if (buttonElement.innerText === 'Subscribe') {
+          buttonElement.innerText = 'Subscribed'
+        } else {
+          buttonElement.innerText = 'Subscribe' 
+        }
+        }
+
+        function calculateCost() {
+          const inputElement = document.querySelector('.js-cost-input')
+          let cost = Number(inputElement.value); // 
+          if (cost < 40) {
+            cost += 10;  // adding shipping cost 
+          }
+          document.querySelector('.js-result').innerHTML = `$${cost}`;
+        }
+
+        function handleKeydown(event) {
+          if(event.key === 'Enter') {
+            calculateCost();
+          }
+
+        }
+        
+        
+
+
+
+        
+        
+    </script> 
+  </body>  
+  
+</html>
+
