@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>dom practice</title>
+    <style>
+      .js-button-9b {
+        display: block;       
+        margin-bottom: 50px;
+      }
+      .js-input-name {
+        margin-top: 25px;
+      }
+    </style>
+  </head>   <!--Window is a global object which contains build in 
+            objects inside it such as console and document-->                    
+  <body>
+    
+    <button class="js-button-9a">9a</button>
+    
+    <button class="js-button-9b">9b</button>
+    
+    <button onclick="
+      document.querySelector('.js-clickedSide').innerHTML = 'you played heads';
+    ">heads</button>
+    
+    <button onclick="
+      document.querySelector('.js-clickedSide').innerHTML = 'you played tails';
+    ">tails</button>
+    
+    <p class="js-clickedSide"></p>
+    
+    <input class="js-name-input" onkeydown="
+      checkKeydown(event);
+    ">
+    
+    <button class="js-submit-button" onclick="
+      showName();
+    ">Submit</button>
+    
+    <p class="js-name"></p>
+
+    <script>
+      console.log(window.document.querySelector('.js-button-9a'));
+      window.console.log('heyyyy'); 
+      console.log(document.querySelector('.js-button-9b').innerHTML
+      = '9b done');     
+      
+      function showName() {
+        document.querySelector('.js-name').innerHTML =  
+        document.querySelector('.js-name-input').value; 
+      }
+      
+      function checkKeydown(event) {
+        if (event.key === 'Enter') {
+          showName();
+        } 
+      }      
+    </script>
+  </body>
+</html>

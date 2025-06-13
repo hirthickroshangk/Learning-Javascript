@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <!--IN THIS VERSION OF CALCULATOR I WILL USE LOCAL STROAGE TO RETRIVE OLD CALCULATION BEFORE RELOADING PAGE-->
+  <body>
+    <p>Tiny Calculator</p>
+    
+    <p class="js-calculations"></p>
+    
+    <p>
+      <button
+      onclick="
+      updateCalculation('0');
+    "
+    >
+      0
+    </button>
+    <button
+      onclick="
+      updateCalculation('1');
+      "
+    >
+      1
+    </button>
+    <button
+      onclick="
+      updateCalculation('2');
+      "
+    >
+      2
+    </button>
+    <button
+      onclick="
+      updateCalculation('3');
+      "
+    >
+      3
+    </button>
+
+    <button
+      onclick="
+      updateCalculation('4');
+      "
+    >
+      4
+    </button>
+    </p>
+
+    <p>
+      <button
+      onclick="
+      updateCalculation('5');
+      "
+    >
+      5
+    </button>
+
+    <button
+      onclick="
+      updateCalculation('6');
+      "
+    >
+      6
+    </button>
+
+    <button
+      onclick="
+      updateCalculation('7');
+      "
+    >
+      7
+    </button>
+
+    <button
+      onclick="
+      updateCalculation('8');
+      "
+    >
+      8
+    </button>
+
+    <button
+      onclick="
+      updateCalculation('9');
+      "
+    >
+      9
+    </button>
+
+
+    </p>
+
+    <p>
+      <button
+      onclick="
+      updateCalculation('+');
+      "
+    >
+      +
+    </button>
+
+    <button
+      onclick="
+      updateCalculation('-');
+      "
+    >
+      -
+    </button>
+
+    <button
+      onclick="
+      updateCalculation('*');
+      "
+    >
+      *
+    </button>
+
+    <button
+      onclick="
+      updateCalculation('/');
+      "
+    >
+      /
+    </button>
+
+    <button
+      onclick="
+      updateCalculation('%');
+      "
+    >
+      %
+    </button>
+
+    </p>
+
+    <button
+      onclick="
+      calculate();
+      "
+      
+    >
+      =
+    </button>
+
+    <button
+      onclick="
+      clearCalculations();
+    "
+    >
+      Clear
+    </button>
+
+
+    <script>
+      let calculations = localStorage.getItem("calculations") || "";
+      document.querySelector('.js-calculations').innerHTML =
+      calculations;
+      calculations = '';
+
+      function updateCalculation(value) {
+        calculations += value;
+        localStorage.setItem("calculations", calculations);
+        document.querySelector('.js-calculations').innerHTML =
+        calculations;
+      }
+
+      function calculate() {
+        calculations = eval(calculations);
+        console.log(calculations);
+        localStorage.setItem('calculations', calculations);
+        document.querySelector('.js-calculations').innerHTML =
+          calculations;
+          
+      }
+
+      function clearCalculations() {
+        calculations = '';
+        console.log(calculations);
+        localStorage.removeItem('calculations');
+        document.querySelector('.js-calculations').innerHTML =
+        calculations;
+      }
+    </script>
+  </body>
+</html>
