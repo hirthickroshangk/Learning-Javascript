@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissor 10</title>
+  </head>
+  <link rel="stylesheet" href="./styles/10-dom-rock-paper-scissor.css">
+  <body>
+    <p class="title">Rock Paper Scissor</p>
+    <!--I have updated this program features with my objects knowledge and also i have added a reset button-->
+
+    <button class="play-buttons "
+      onclick="
+    calculateResult('rock');
+    "
+    >
+    <img class="move-img" src="./pictures/rock-emoji.png" alt="">
+      
+    </button>
+
+    <button class="play-buttons"
+      onclick="
+    calculateResult('paper');
+    "
+    >
+      <img class="move-img" src="./pictures/paper-emoji.png" alt="">
+      
+    </button>
+
+    <button class="play-buttons"
+      onclick="
+    calculateResult('scissors');
+    "
+    >
+      
+    <img class="move-img" src="./pictures/scissors-emoji.png" alt="">
+    </button>
+    <p class="js-result result">You win.</p>  
+    <p class="js-moves moves">
+      
+    </p>
+    <p class="js-score score"></p>
+
+    <button class="reset-button"
+      onclick="
+      resetScore();
+    "
+    >
+      Reset Score
+    </button>
+
+    <script src="/scripts/10-dom-rock-paper-scissor.js"></script>
+  </body>
+</html>

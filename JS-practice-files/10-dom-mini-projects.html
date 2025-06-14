@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>  <!--Working on some mini projects for improving my skills in DOM-->
+  <head>   <!--We make a website amazing with this dom feature-->
+    <title>DOM MINI PROJECTS</title>
+    <style>
+      body {
+        font-size: 16px;
+        font-family: arial;
+      }
+      .js-subscribe-button {
+        margin-bottom: 25px;
+      }
+      .js-result {
+        margin-bottom: 25px;
+      }
+      .subscribe-button {
+        border: none;
+        background-color: black;
+        color: white;
+        padding: 10px 18px;
+        border-radius: 18px;
+        font-weight: bold;
+      }
+      .on-click-subscribe {
+        background-color: rgb(240,240,240);
+        color: black;
+      }
+      .cost-input {
+        font-size: 14px;
+        padding: 8px 25px 8px 5px;
+      }
+      .calculate-button {
+        background-color: rgb(40, 202, 40);
+        color: whitesmoke;
+        border: none;
+        font-size: 14px;
+        padding: 0px 10spx;
+        margin-left: 4px;
+
+      }
+      .flex-amazon {
+        display: flex;
+        
+      }
+      
+
+    </style>
+  </head>
+  <body>
+    <p>Welcome To Our Channel, Do Subscribe for constant fun!!</p>
+    
+    <button class="js-subscribe-button subscribe-button" onclick="
+      subscribe();
+    ">Subscribe</button>
+
+    <p>Amazon Shipping Calculator</p>
+    <div class="flex-amazon">
+
+      <input placeholder="Cost of order" class="js-cost-input cost-input"
+      onkeydown="
+        handleKeydown(event);
+      ">
+      
+      <button class="js-calculate calculate-button" onclick="
+        calculateCost(); 
+      ">Calculate</button>
+    </div>
+    
+    
+    <p class="js-result">Hit enter or the calculate button!!</p>
+    
+    <input class="js-input" onkeyup="
+      document.querySelector('.js-live-input').innerHTML = 
+      document.querySelector('.js-input').value;
+      ">
+    <p class="js-live-input"></p>
+  
+    <script>                     //Using querySelector we can choose any element
+      function subscribe() {     // in the HTML structure and control it.
+        const buttonElement = document.querySelector('.js-subscribe-button');
+        if (buttonElement.innerText === 'Subscribe') {
+          buttonElement.innerText = 'Subscribed';
+          buttonElement.classList.add('on-click-subscribe');
+
+        } else {
+          buttonElement.innerText = 'Subscribe'; 
+          buttonElement.classList.remove('on-click-subscribe')
+
+        }
+        }
+
+      function calculateCost() {
+        const inputElement = document.querySelector('.js-cost-input')
+        let cost = Number(inputElement.value); // 
+        cost *= 100; //changing dollars into cents for better 
+        if (cost < 4000) { // calculations of decimals.
+          cost += 1000;
+        }
+        cost /= 100; // changing the cents back to dollar
+        document.querySelector('.js-result').innerHTML = `$${cost}`;
+        }
+
+      function handleKeydown(event) {
+        if(event.key === 'Enter') {
+          calculateCost();
+        }
+        }
+      </script> 
+  </body>  
+  
+</html>
+
