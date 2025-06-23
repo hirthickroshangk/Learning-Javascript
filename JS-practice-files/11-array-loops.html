@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<HTMl>
+  <head>
+    <title>
+      11 Array and Loops  
+    </title>
+    <style>
+
+    </style>
+  </head>
+
+  <body>
+    
+
+    <script>
+    /*  const arrayNum = [1,2,3,4,5,6,7];
+     // console.log(arrayNum);
+     // console.log(arrayNum[6]);
+      arrayNum[7] = 8;
+     // console.log(arrayNum); 
+
+      arrayMixed = [23, true, {password:1410,user:'renuga'}, [2,3,4,2,32,12],
+      arrayNum
+      ];
+      dummy = [120,'iam a dummy'];
+      arrayMixed[5] = dummy;
+      console.log(arrayMixed[4],arrayMixed[2],arrayMixed[1]);
+      console.log(Array.isArray(arrayNum),Array.isArray(dummy));
+      console.log(arrayMixed.length);
+      console.log(arrayMixed[5]);
+      arrayMixed.push([8,7,5,4]);
+      console.log(arrayMixed);
+      arrayMixed.splice(6,1);
+      console.log(arrayMixed);
+      */
+/*
+      let i = 1;
+      while (i<=  50) {
+        
+
+        console.log(i);
+        i++;
+  
+      }
+      console.log(i,i,i);
+
+      for (let i = 1; i <= 30; i++) {
+        console.log(i);  
+      }
+
+      console.log(i);
+
+      let randomNumber = 0; 
+      while (randomNumber < 0.5) {
+        randomNumber = Math.random();
+      }
+      console.log(randomNumber); 
+      */
+    /*    
+      toDoList = [
+      'finish atleast 2 lessons today',
+      'Go to GYM',
+      'drink green tea',
+      'eat under 2000 calories'
+      ];
+
+      for (i = 0; i <= (toDoList.length - 1); i ++) {
+        const singleTask = toDoList[i];
+        console.log(i);
+        console.log(singleTask);
+      }
+     */  
+    /*
+     const num = [7,5,2003];
+     let totalNum = 0;
+
+     for (let i = 0; i < num.length; i++) {
+      totalNum += num[i];
+     }
+     console.log(totalNum);
+     
+     let numDoubled = [];
+
+     for (let i = 0; i < num.length; i++) {
+      const iNum = num[i];
+      numDoubled.push(iNum*2);
+     }
+     console.log(numDoubled);
+
+    */
+      const array1 = [1,2,3];
+      const array2 = array1; //the variables are just references,here 
+      array2.push(4);        //both array1 and array2 to point to the 
+      console.log(array1);   //same array.  
+      const array3 = array2;
+      array3.push(5);
+      console.log(array1);
+      const array4 = array3.slice(); //SLICING THE FULL ARRAY3 AND SAVING 
+      array4.push(6);                //IT IN THE ARRAY4 REFERENCE.
+      console.log(array1,array4);
+      const [firstValue,secondValue] = [1,2,3,4]; //shorthand for saving
+      console.log(firstValue,secondValue); //arrays in variables.
+      
+      for (let i = 0; i <= 10; i++) {
+        if (! (i % 3)) {
+          continue;
+        }
+        console.log(i);
+      }
+     
+      let i = 1;
+      while (i <= 10) {
+        if (i % 4 === 0) {
+          break; 
+        }
+        console.log(i);
+        i++;
+      }
+
+      function numDoubled(num) {
+        let numDoubled = [];
+
+        for (let i = 0; i < num.length; i++) {
+         const iNum = num[i];
+         if (iNum === 7) {
+          break;
+         }
+         numDoubled.push(iNum*2);
+        }
+        return numDoubled;
+      }
+
+
+    
+
+                             
+     
+
+      
+      
+
+
+
+    </script>
+  </body>
+</HTMl>

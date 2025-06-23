@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To Do List</title>
+    <link rel="stylesheet" href="/styles/11-todo-list.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+  </head>
+  <body>
+    <p class="heading">To Do List !!</p>
+    <div class="input-grid">
+      
+      <input placeholder="write your ToDo" class="js-task-input task-input" onkeydown="
+      handleKeyDown(event);
+      ">
+      <input type="date" class="js-due-date due-date">
+      <button class="add-button" onclick="
+      addToDo();
+      ">Add</button>
+
+    </div>
+    
+    <div class="js-todo-display todo-grid"></div>
+
+    <script src="/scripts/11-todo-list.js"></script>
+  </body>
+  
+</html>
