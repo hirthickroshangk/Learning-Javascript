@@ -1,0 +1,51 @@
+body {
+  font-family: black ops one;
+}
+.heading {
+  font-size: 35px;
+  margin: 15px 0px 15px 0px;
+  
+}
+.input-grid, .todo-grid {
+  display: grid;
+  grid-template-columns: 310px 120px 90px;
+  row-gap: 15px;
+  column-gap: 10px;
+  align-items: center;
+}
+.input-grid {
+  margin-bottom: 15px;
+  align-items: stretch;
+}
+
+.task-input {
+  
+  border: 2px rgba(0, 0, 0, 0.45) solid;
+  padding-left: 8px;
+  font-family: black ops one;
+} 
+.due-date {
+  border: 2px rgba(0, 0, 0, 0.45) solid;
+  background-color: white;
+  color: black;
+  
+}
+.delete-button, .add-button {
+  height: 30px;
+  background-color: rgb(231, 215, 215);
+  color: black;
+  border: none;
+}
+.add-button {
+  background-color: black;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
